@@ -26,8 +26,8 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        - languages: ${{ matrix.language }}
-        - debug: true
+        languages: ${{ matrix.language }}
+
 
     - run: |
         echo "Run, Build Application using script"
