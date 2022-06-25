@@ -1,0 +1,49 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "PVS-Studio",
+          "semanticVersion": "7.19.61166.3606",
+          "informationUri": "https://pvs-studio.com",
+          "rules": [
+            {
+              "id": "Renew",
+              "name": "RuleRenew",
+              "help": {
+                "text": "https://pvs-studio.com/en/renewal/"
+              },
+              "helpUri": "https://pvs-studio.com/en/renewal/"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "Renew",
+          "message": {
+            "text": "Your license will expire in 8 days. Click 'Renew' to learn more or contact us at support@viva64.com. This is an information message. You can continue using the analyzer with your current license. To hide this message, use the '--disableLicenseExpirationCheck' flag."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file://"
+                },
+                "region": {
+                  "startLine": 0,
+                  "endLine": 0,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
