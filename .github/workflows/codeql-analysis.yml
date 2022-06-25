@@ -30,8 +30,8 @@ jobs:
         - debug: true
 
     - run: |
-      echo "Run, Build Application using script"
-      g++ -c -Wall -Wextra -Wpedantic f.cpp
+        echo "Run, Build Application using script"
+        g++ -c -Wall -Wextra -Wpedantic f.cpp
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
