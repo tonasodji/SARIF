@@ -16,6 +16,8 @@ jobs:
 
     strategy:
       fail-fast: false
+      matrix:
+        language: [cpp]
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -24,12 +26,12 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        - languages: cpp
+        - languages: ${{ matrix.language }}
         - debug: true
 
     - run: |
       echo "Run, Build Application using script"
-      gcc -c -Wall -Wextra -Wpedantic f.cpp
+      g++ -c -Wall -Wextra -Wpedantic f.cpp
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
