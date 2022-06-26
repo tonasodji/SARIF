@@ -27,3 +27,8 @@ jobs:
         with:
           name: sarif
           path: results.sarif
+          sarif_file: ../results
+          checkout_path: /home/runner/work/sarif/sarif
+          token: ***
+          matrix: null
+          wait-for-processing: true
