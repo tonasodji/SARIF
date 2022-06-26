@@ -1,29 +1,17 @@
 name: "Upload SARIF"
-
 # Run workflow each time code is pushed to your repository and on a schedule.
-# The scheduled workflow runs every Thursday at 15:45 UTC.
+# The scheduled workflow runs every at 00:00 on Sunday UTC time.
 on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: self-hosted
-    permissions:
-      # required for all workflows
-      security-events: write
-      # only required for workflows in private repositories
-      actions: read
-      contents: read
+    runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Run
-        run: |
-          echo ls
-
-      - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: results.sarif
-
+    # This step checks out a copy of your repository.
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: results.sarif
