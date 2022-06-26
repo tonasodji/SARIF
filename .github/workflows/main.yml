@@ -23,7 +23,7 @@ jobs:
           echo ls
 
       - name: Upload SARIF
-        uses: actions/upload-artifact@v2
+        uses: github/codeql-action/upload-sarif@v1
         with:
           name: sarif
           path: results.sarif
