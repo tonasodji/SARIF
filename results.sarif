@@ -9,7 +9,7 @@
           "rules": [
             {
               "id": "R01"
-                      ...
+               
               "properties" : {
                  "id" : "java/unsafe-deserialization",
                  "kind" : "path-problem",
