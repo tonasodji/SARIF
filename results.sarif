@@ -15,7 +15,7 @@
                  "kind" : "path-problem",
                  "name" : "...",
                  "problem.severity" : "error",
-                 "security-severity" : "9.8",
+                 "security-severity" : "9.8"
                }
             }
           ]
