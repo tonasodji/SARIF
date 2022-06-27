@@ -1,0 +1,145 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "PVS-Studio",
+          "semanticVersion": "7.19.61166.3606",
+          "informationUri": "https://pvs-studio.com",
+          "rules": [
+            {
+              "id": "V591",
+              "name": "RuleV591",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v591/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v591/",
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-393"
+                ]
+              }
+            },
+            {
+              "id": "V2542",
+              "name": "RuleV2542",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v2542/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v2542/"
+            },
+            {
+              "id": "V2601",
+              "name": "RuleV2601",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v2601/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v2601/"
+            },
+            {
+              "id": "V2615",
+              "name": "RuleV2615",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v2615/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v2615/"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "V591",
+          "message": {
+            "text": "Non-void function should return a value."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C%3A/Users/39389/Desktop/Repo/sarif-main/f.c"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V2542",
+          "message": {
+            "text": "Function with a non-void return type should return a value from all exit paths."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C%3A/Users/39389/Desktop/Repo/sarif-main/f.c"
+                },
+                "region": {
+                  "startLine": 4,
+                  "endLine": 4,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V2601",
+          "message": {
+            "text": "Functions should be declared in prototype form with named parameters."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C%3A/Users/39389/Desktop/Repo/sarif-main/f.c"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "V2615",
+          "message": {
+            "text": "A compatible declaration should be visible when an object or function with external linkage is defined."
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C%3A/Users/39389/Desktop/Repo/sarif-main/f.c"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
