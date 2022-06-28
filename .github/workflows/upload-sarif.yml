@@ -8,13 +8,8 @@ jobs:
     runs-on: self-hosted
     steps:
     # This step checks out a copy of your repository.
-    - name: Compile
-      run: |
-        CLMonitor.exe
-        gcc -c -Wall -Wextra -Wpedantic p.c
-        CLMonitor.exe analyze -l ris.plog
-        PlogConverter.exe ris.plog -t sarif -n results
-        
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v2
       with:
