@@ -1,0 +1,49 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "PVS-Studio",
+          "semanticVersion": "7.19.61166.3606",
+          "informationUri": "https://pvs-studio.com",
+          "rules": [
+            {
+              "id": "V009",
+              "name": "RuleV009",
+              "help": {
+                "text": "https://pvs-studio.com/en/docs/warnings/v009/"
+              },
+              "helpUri": "https://pvs-studio.com/en/docs/warnings/v009/"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "V009",
+          "message": {
+            "text": "To use free version of PVS-Studio, source code files are required to start with a special comment."
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C%3A/Users/39389/Desktop/test/main.c"
+                },
+                "region": {
+                  "startLine": 1,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
