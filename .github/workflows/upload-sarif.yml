@@ -1,6 +1,5 @@
 name: "Upload SARIF"
-# Run workflow each time code is pushed to your repository and on a schedule.
-# The scheduled workflow runs every at 00:00 on Sunday UTC time.
+
 on:
   push:
     branches: [ "main" ]
@@ -14,6 +13,7 @@ jobs:
     # This step checks out a copy of your repository.
     - name: Checkout repository
       uses: actions/checkout@v2
+    
     - name: Compile
       run: |
         touch makefile
