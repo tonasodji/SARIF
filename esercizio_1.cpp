@@ -108,7 +108,7 @@ class Orario{
         {
             return s;
         }
-        int to_second()
+        void to_second()
         {
             int secondi = 0;
             secondi = s + m * 60 + h * 60 * 60;
