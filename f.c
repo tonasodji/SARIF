@@ -3,10 +3,16 @@
 
 #define A _a
 
+int f()
+{
+  //
+}
+
 int main()
 {
   int a;
   int A;
   int a_;
+  int f = f();
   printf("hello world\n");
 }
