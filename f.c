@@ -4,11 +4,11 @@
 #define A _a
 int f()
 {
-  return 0;
+  
 }
 int main()
 {
-  //int f  = f();
+  
   int a;
   int A;
   int a_;
