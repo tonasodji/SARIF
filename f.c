@@ -2,9 +2,13 @@
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 
 #define A _a
-
+int f()
+{
+  
+}
 int main()
 {
+  int f  = f();
   int a;
   int A;
   int a_;
