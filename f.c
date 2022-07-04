@@ -4,5 +4,6 @@
 int f()
 {
   //
-  // 
+  //
+  cout<<"hello"
 }
