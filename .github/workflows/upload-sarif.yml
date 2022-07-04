@@ -15,9 +15,9 @@ jobs:
       run: |
         touch makefile
         echo "file.o: f.c" > makefile
-        echo -e "\tgcc -c -W --all-warnings --extra-warnings f.c" >> makefile
-        pvs-studio-analyzer trace -- make
-        pvs-studio-analyzer analyze -l PVS-Studio.lic -o PVS-Studio.log
+        echo -e "\tgcc -c --all-warnings --extra-warnings f.c" >> makefile
+        pvs-studio-analyzer trace -- make -j8
+        pvs-studio-analyzer analyze -j8 -l PVS-Studio.lic -o PVS-Studio.log
         plog-converter PVS-Studio.log -t sarif -o results.sarif
    
     - name: Upload Artifact
