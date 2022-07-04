@@ -9,4 +9,10 @@ int main()
   int A;
   int a_;
   printf("hello world\n");
+  f();
+}
+
+int f()
+{
+  
 }
