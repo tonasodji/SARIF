@@ -13,6 +13,6 @@ int main()
   int a;
   int A;
   int a_;
-  int f = f();
+  int f = f();//
   printf("hello world\n");
 }
