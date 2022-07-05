@@ -1,7 +1,9 @@
 name: "Upload SARIF"
 
-on: [push, pull_request]
-
+on: 
+  push:
+  pull_request:
+    branches-ignore: main
 
 jobs:
   build:
