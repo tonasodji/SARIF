@@ -1,7 +1,8 @@
 name: "Upload SARIF"
 
 on: 
-  push:
+  push: 
+    branches: main
   pull_request:
     branches-ignore: main
 
