@@ -8,4 +8,7 @@ int f()
 
 int g()
 {
+  
 }
+
+int g = g();
