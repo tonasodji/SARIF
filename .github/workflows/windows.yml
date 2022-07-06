@@ -1,4 +1,4 @@
-name: "Upload SARIF"
+name: "PVS su Windows"
 
 on: 
   workflow_dispatch:
