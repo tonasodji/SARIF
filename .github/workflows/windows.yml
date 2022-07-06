@@ -4,26 +4,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: windows
+  job1:
+    runs-on: Windows
     steps:
     # This step checks out a copy of your repository.
     - name: Checkout repository
       uses: actions/checkout@v2
     
-    - name: Compile
+    - name: prima parte
       run: |
-        
-   
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: artefatti
-        path: results.sarif
+        echo "prima parte"
+  job2:
+    runs-on: self-hosted
+    steps:
+    - name: seconda parte
+      run: |
+        echo "seconda parte"
       
-    
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: results.sarif
++
