@@ -3,7 +3,7 @@
 
 int f()
 {
-  reyurn 0;
+  return 0;
 }
 
 int g()
