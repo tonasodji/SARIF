@@ -13,7 +13,14 @@ jobs:
     - name: prima parte
       run: |
         CLMonitor.exe
+        
+        
+  job2:
+    needs: job1
+    runs-on: self-hosted
+    steps:
+    - name: seconda parte
+      run: |
         gcc -W f.c
         CLMonitor.exe analyze -l PVS-Studio.lic -o ris.plog
         plogConverter.exe ris.plog -t sarif -n results
-      
