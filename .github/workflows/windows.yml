@@ -16,7 +16,6 @@ jobs:
         
         
   job2:
-    needs: job1
     runs-on: self-hosted
     steps:
     - name: seconda parte
