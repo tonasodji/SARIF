@@ -3,10 +3,7 @@
 
 int f()
 {
+  int x;
+  x=0;
   return 0;
-}
-
-int g()
-{
-  
 }
