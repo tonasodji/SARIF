@@ -12,11 +12,8 @@ jobs:
     
     - name: prima parte
       run: |
-        echo "prima parte"
-  job2:
-    runs-on: self-hosted
-    steps:
-    - name: seconda parte
-      run: |
-        echo "seconda parte"
+        CLMonitor.exe
+        gcc -W f.c
+        CLMonitor.exe analyze -l PVS-Studio.lic -o ris.plog
+        plogConverter.exe ris.plog -t sarif -n results
       
