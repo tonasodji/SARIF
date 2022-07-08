@@ -4,6 +4,6 @@
 int f()
 {
   int x;
-  x=0;
-  return 0;
+  x=10;
+  return x;
 }
