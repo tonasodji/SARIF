@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: Windows
+    runs-on: ubuntu-latest
     steps:
     # This step checks out a copy of your repository.
     - name: Checkout repository
