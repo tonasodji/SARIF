@@ -1,3 +1,5 @@
+#!/bin/bash
+
 touch makefile
 echo "file.o: f.c" > makefile
 echo -e "\tgcc -c --all-warnings --extra-warnings -W f.c" >> makefile
