@@ -1,4 +1,4 @@
-name: "client"
+name: "test reuse"
 
 on:
   workflow_dispatch:
@@ -12,5 +12,5 @@ jobs:
       uses: actions/checkout@v2
     
   test:
-    uses: testentertest/server/.github/workflows/blank.yml@main
+    uses: .github/workflows/reuse.yml@main
   
