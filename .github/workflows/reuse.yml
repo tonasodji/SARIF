@@ -1,4 +1,4 @@
-name: "server"
+name: "reuse"
 
 on:
   workflow_call:
@@ -13,7 +13,7 @@ on:
 jobs:
   example_job:
     name: Pass input and secrets to my-action
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: ./.github/workflows/my-action
         with:
