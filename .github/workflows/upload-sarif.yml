@@ -1,4 +1,4 @@
-name: "Upload SARIF"
+name: "Analyse"
 
 on:
   pull_request:
