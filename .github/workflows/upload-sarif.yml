@@ -1,10 +1,10 @@
-name: "Upload SARIF"
+name: "Analyse"
 
-on: [pull_request]
+on: [pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: self-hosted #ubuntu --- con PVS-Studio installato
+    runs-on: self-hosted
     steps:
     # This step checks out a copy of your repository.
     - name: Checkout repository
