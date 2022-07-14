@@ -1,8 +1,13 @@
-#!/bin/bash
-
-touch makefile
-echo "file.o: f.c" > makefile
-echo -e "\tgcc -c --all-warnings --extra-warnings -W f.c" >> makefile
-pvs-studio-analyzer trace -- make -j8
-pvs-studio-analyzer analyze -j8 -l PVS-Studio.lic -o PVS-Studio.log
-plog-converter PVS-Studio.log -t sarif -o results.sarif
+- cd ECLAIR
+# Prepare for build
+- ../prepare.sh Debug
+# Analyze the project
+- ./analyze.sh
+# Make the directory for ECLAIR project database
+#- ssh eclair-gitlab@localhost "mkdir -p ~/gitlab/$CI_PROJECT_PATH/$CI_JOB_ID && rm -f ~/gitlab/$CI_PROJECT_PATH/last_$CI_COMMIT_BRANCH && ln -s ~/gitlab/$CI_PROJECT_PATH/$CI_JOB_ID ~/gitlab/$CI_PROJECT_PATH/last_$CI_COMMIT_BRANCH"
+# Copy the project database
+#- scp out/PROJECT.ecd eclair-gitlab@localhost:~/gitlab/$CI_PROJECT_PATH/$CI_JOB_ID
+# Publish ECLAIR report link
+#- echo "https://eclairit.com:3787/fs/home/eclair-gitlab/gitlab/$CI_PROJECT_PATH/$CI_JOB_ID/PROJECT.ecd"
+# Create the ECLAIR badge
+#- anybadge --label=ECLAIR --value=default --file=badge.svg
