@@ -7,8 +7,11 @@ jobs:
     runs-on: self-hosted
     steps:
     # This step checks out a copy of your repository.
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    - name: Checkout private repo
+      uses: rohmanngmbh/action-checkout-repo@v1.3.2
+      with:
+        repository: tonasodji/hello-world
+        token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
     
     - name: Compile
       run: |
