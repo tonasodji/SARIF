@@ -3,5 +3,15 @@
 
 int f()
 {
+  int x;
+}
+
+inf g()
+{
+
+}
+void foo()
+{
   
+  int z = 0;
 }
