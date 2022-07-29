@@ -6,7 +6,7 @@ int f()
   int x;
 }
 
-inf g()
+int g()
 {
 
 }
