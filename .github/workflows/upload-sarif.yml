@@ -32,7 +32,7 @@ jobs:
     - name: Upload SARIF file
       run: |
         ris=$(gzip -c results.sarif | base64 -w0)
-        curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${{secrets.TOK}}" https://api.github.com/repos/tonasodji/sarif/code-scanning/sarifs -d '{--ref refs/heads/sarif --commit_sha $GITHUB_SHA --sarif $ris}
+        curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token ${{secrets.TOK}}" https://api.github.com/repos/tonasodji/sarif/code-scanning/sarifs -d '{--ref refs/heads/sarif --commit_sha $GITHUB_SHA --sarif $ris}'
         
         
   download:
